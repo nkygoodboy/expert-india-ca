@@ -262,13 +262,17 @@ id="mobile"
 placeholder="Mobile Number"
 required>
 
+<input type="date"
+id="dob"
+required>
+
 <input type="text"
 id="serviceName"
 readonly>
 
 <textarea
 id="message"
-placeholder="Your Message">
+placeholder="Your Details">
 </textarea>
 
 <button type="submit">
@@ -305,20 +309,6 @@ Very fast GST registration service.
 
 <p>
 Professional CA support and quick response.
-</p>
-
-<div class="stars">
-★★★★★
-</div>
-
-</div>
-
-<div class="review-card">
-
-<h3>Priya Singh</h3>
-
-<p>
-Easy ITR filing process.
 </p>
 
 <div class="stars">
@@ -374,10 +364,16 @@ Name: document.getElementById("name").value,
 "Mobile number":
 document.getElementById("mobile").value,
 
-service:
+"DOB":
+document.getElementById("dob").value,
+
+"Service":
 document.getElementById("serviceName").value,
 
-date:
+"Details":
+document.getElementById("message").value,
+
+"Date":
 new Date().toLocaleString()
 
 }
