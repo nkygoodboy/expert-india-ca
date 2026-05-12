@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <title>Expert India CA</title>
 
 <style>
@@ -151,20 +156,27 @@ font-weight:bold;
 </style>
 
 </head>
+
 <body>
 
 <header>
+
 <h1>Expert India CA</h1>
+
 <p>
 GST | Income Tax | MSME | Company Registration
 </p>
+
 </header>
 
 <section class="services">
 
 <div class="card">
+
 <h2>GST Registration</h2>
+
 <p>Fast GST Registration Services</p>
+
 <h3>₹499</h3>
 
 <button class="book-btn"
@@ -176,11 +188,15 @@ Book Now
 class="pay-btn">
 Pay ₹499
 </a>
+
 </div>
 
 <div class="card">
+
 <h2>Income Tax Filing</h2>
+
 <p>Professional ITR Filing Services</p>
+
 <h3>₹999</h3>
 
 <button class="book-btn"
@@ -192,11 +208,15 @@ Book Now
 class="pay-btn">
 Pay ₹999
 </a>
+
 </div>
 
 <div class="card">
+
 <h2>MSME Registration</h2>
+
 <p>Quick MSME Registration</p>
+
 <h3>₹299</h3>
 
 <button class="book-btn"
@@ -208,11 +228,15 @@ Book Now
 class="pay-btn">
 Pay ₹299
 </a>
+
 </div>
 
 <div class="card">
+
 <h2>Company Registration</h2>
+
 <p>Pvt Ltd / LLP Registration</p>
+
 <h3>₹1999</h3>
 
 <button class="book-btn"
@@ -224,11 +248,13 @@ Book Now
 class="pay-btn">
 Pay ₹1999
 </a>
+
 </div>
 
 </section>
 
-<section class="inquiry-form" id="formSection">
+<section class="inquiry-form"
+id="formSection">
 
 <h2>Client Details Form</h2>
 
@@ -249,25 +275,33 @@ id="email"
 placeholder="Email Address"
 required>
 
-<select id="serviceName" required>
+<select id="serviceName"
+required>
+
 <option value="">
 Select Service
 </option>
+
 <option>
 GST Registration
 </option>
+
 <option>
 Income Tax Filing
 </option>
+
 <option>
 MSME Registration
 </option>
+
 <option>
 Company Registration
 </option>
+
 </select>
 
-<textarea id="message"
+<textarea
+id="message"
 placeholder="Enter Your Details">
 </textarea>
 
@@ -277,8 +311,7 @@ placeholder="Enter Your Details">
 Upload Payment Screenshot
 </label>
 
-<input type="file"
-accept="image/*,.pdf">
+<input type="file">
 
 <button type="submit"
 class="submit-btn">
@@ -290,19 +323,41 @@ Submit Inquiry
 </section>
 
 <div class="review-card">
-<h3>Rahul Sharma ⭐⭐⭐⭐⭐</h3>
-<p>Very Fast GST Registration Service.</p>
+
+<h3>
+Rahul Sharma ⭐⭐⭐⭐⭐
+</h3>
+
+<p>
+Very Fast GST Registration Service.
+</p>
+
 </div>
 
 <div class="review-card">
-<h3>Aman Verma ⭐⭐⭐⭐⭐</h3>
-<p>Professional Income Tax Filing Support.</p>
+
+<h3>
+Aman Verma ⭐⭐⭐⭐⭐
+</h3>
+
+<p>
+Professional Income Tax Filing Support.
+</p>
+
 </div>
 
 <section class="contact">
+
 <h2>Contact Us</h2>
-<p>📞 8840705418</p>
-<p>📧 nkygoodboy@gmail.com</p>
+
+<p>
+📞 8840705418
+</p>
+
+<p>
+📧 nkygoodboy@gmail.com
+</p>
+
 </section>
 
 <a href="https://wa.me/918840705418"
@@ -314,17 +369,19 @@ WhatsApp Us
 
 function showInquiry(service){
 
-const formSection = document.getElementById('formSection');
+document.getElementById(
+'formSection'
+).style.display='block';
 
-formSection.style.display='block';
-
-const serviceSelect = document.getElementById('serviceName');
-
-serviceSelect.value = service;
+document.getElementById(
+'serviceName'
+).value=service;
 
 loadDocuments(service);
 
-formSection.scrollIntoView({
+document.getElementById(
+'formSection'
+).scrollIntoView({
 behavior:'smooth'
 });
 
@@ -332,151 +389,196 @@ behavior:'smooth'
 
 function loadDocuments(service){
 
-const docs = document.getElementById('dynamicDocuments');
+const docs=document.getElementById(
+'dynamicDocuments'
+);
 
-if(service === 'GST Registration'){
+if(service==='GST Registration'){
 
-docs.innerHTML = `
-<label>Upload Aadhaar Card</label>
-<input type="file" accept="image/*,.pdf">
+docs.innerHTML=`
 
-<label>Upload PAN Card</label>
-<input type="file" accept="image/*,.pdf">
+<label>
+Upload Aadhaar Card
+</label>
 
-<label>Upload Rent Agreement / Light Bill</label>
-<input type="file" accept="image/*,.pdf">
+<input type="file">
+
+<label>
+Upload PAN Card
+</label>
+
+<input type="file">
+
+<label>
+Upload Rent Agreement / Light Bill
+</label>
+
+<input type="file">
+
 `;
 
 }
 
-else if(service === 'Income Tax Filing'){
+else if(service==='Income Tax Filing'){
 
-docs.innerHTML = `
-<label>Upload Aadhaar Card</label>
-<input type="file" accept="image/*,.pdf">
+docs.innerHTML=`
 
-<label>Upload PAN Card</label>
-<input type="file" accept="image/*,.pdf">
+<label>
+Upload Aadhaar Card
+</label>
 
-<label>Upload Form 16 / Bank Statement</label>
-<input type="file" accept="image/*,.pdf">
+<input type="file">
+
+<label>
+Upload PAN Card
+</label>
+
+<input type="file">
+
+<label>
+Upload Form 16 / Bank Statement
+</label>
+
+<input type="file">
+
 `;
 
 }
 
-else if(service === 'MSME Registration'){
+else if(service==='MSME Registration'){
 
-docs.innerHTML = `
-<label>Upload Aadhaar Card</label>
-<input type="file" accept="image/*,.pdf">
+docs.innerHTML=`
 
-<label>Upload PAN Card</label>
-<input type="file" accept="image/*,.pdf">
+<label>
+Upload Aadhaar Card
+</label>
+
+<input type="file">
+
+<label>
+Upload PAN Card
+</label>
+
+<input type="file">
+
 `;
 
 }
 
-else if(service === 'Company Registration'){
+else if(service==='Company Registration'){
 
-docs.innerHTML = `
-<label>Upload Director PAN Card</label>
-<input type="file" accept="image/*,.pdf">
+docs.innerHTML=`
 
-<label>Upload Aadhaar Card</label>
-<input type="file" accept="image/*,.pdf">
+<label>
+Upload Director PAN Card
+</label>
 
-<label>Upload Electricity Bill</label>
-<input type="file" accept="image/*,.pdf">
+<input type="file">
+
+<label>
+Upload Aadhaar Card
+</label>
+
+<input type="file">
+
+<label>
+Upload Electricity Bill
+</label>
+
+<input type="file">
+
 `;
 
 }
 
 }
 
+document.getElementById(
+'serviceName'
+).addEventListener(
+'change',
+function(){
 
-
-document.getElementById('serviceName')
-.addEventListener('change',function(){
 loadDocuments(this.value);
-});
 
+}
+);
 
-document.getElementById('leadForm')
-.addEventListener('submit',function(e){
+document.getElementById(
+'leadForm'
+).addEventListener(
+'submit',
+function(e){
 
 e.preventDefault();
 
-const formData = {
+fetch(
+'https://script.google.com/macros/s/AKfycbyHi8XT2J5E46L73xvjOhuDy_reF3fzG3wmtJFn3G3HzM2pRwYcAuv3C7Q8pUMeiyV9/exec',
 
-data:[
 {
-
-Name:document.getElementById('name').value,
-
-"Mobile number":document.getElementById('mobile').value,
-
-Email:document.getElementById('email').value,
-
-Service:document.getElementById('serviceName').value,
-
-Details:document.getElementById('message').value,
-
-Date:new Date().toLocaleString()
-
-}
-]
-
-};
-
-fetch('https://script.google.com/macros/s/AKfycbyHi8XT2J5E46L73xvjOhuDy_reF3fzG3wmtJFn3G3HzM2pRwYcAuv3C7Q8pUMeiyV9/exec', {
-
-method:'POST',
-
-body:JSON.stringify({
-
-name:document.getElementById('name').value,
-
-mobile:document.getElementById('mobile').value,
-
-email:document.getElementById('email').value,
-
-service:document.getElementById('serviceName').value,
-
-details:document.getElementById('message').value
-
-})
-
-})
 
 method:'POST',
 
 headers:{
-'Content-Type':'application/json'
+'Content-Type':
+'application/json'
 },
 
-body:JSON.stringify(formData)
+body:JSON.stringify({
+
+name:document.getElementById(
+'name'
+).value,
+
+mobile:document.getElementById(
+'mobile'
+).value,
+
+email:document.getElementById(
+'email'
+).value,
+
+service:document.getElementById(
+'serviceName'
+).value,
+
+details:document.getElementById(
+'message'
+).value
 
 })
 
-.then(response=>response.json())
+}
+
+)
+
+.then(res=>res.json())
 
 .then(data=>{
 
-alert('Inquiry Submitted Successfully ✅');
+alert(
+'Inquiry Submitted Successfully ✅'
+);
 
-document.getElementById('leadForm').reset();
+document.getElementById(
+'leadForm'
+).reset();
 
 })
 
-.catch(error=>{
+.catch(err=>{
 
-alert('Error submitting form');
+alert(
+'Error Submitting Form'
+);
 
 });
 
-});
+}
+);
 
 </script>
 
 </body>
+
 </html>
