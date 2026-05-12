@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <title>Expert India CA</title>
 
 <style>
@@ -11,6 +16,7 @@ body{
 margin:0;
 font-family:Arial,sans-serif;
 background:#f4f7fb;
+scroll-behavior:smooth;
 }
 
 header{
@@ -41,6 +47,11 @@ background:white;
 padding:20px;
 border-radius:18px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h2{
@@ -103,6 +114,12 @@ font-size:17px;
 box-sizing:border-box;
 }
 
+label{
+display:block;
+margin-top:15px;
+font-weight:bold;
+}
+
 .submit-btn{
 background:#005eff;
 color:white;
@@ -115,10 +132,20 @@ margin-top:20px;
 cursor:pointer;
 }
 
+.review-section{
+padding:20px;
+}
+
+.review-title{
+font-size:34px;
+text-align:center;
+margin-bottom:20px;
+}
+
 .review-card{
 background:white;
 padding:20px;
-margin:20px;
+margin-top:15px;
 border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
@@ -128,6 +155,7 @@ background:#111;
 color:white;
 text-align:center;
 padding:40px 20px;
+margin-top:30px;
 }
 
 .whatsapp{
@@ -164,7 +192,9 @@ GST | Income Tax | MSME | Company Registration
 
 <h2>GST Registration</h2>
 
-<p>Fast GST Registration Services</p>
+<p>
+Fast GST Registration Services
+</p>
 
 <h3>₹499</h3>
 
@@ -184,7 +214,9 @@ Pay ₹499
 
 <h2>Income Tax Filing</h2>
 
-<p>Professional ITR Filing Services</p>
+<p>
+Professional ITR Filing Services
+</p>
 
 <h3>₹999</h3>
 
@@ -204,7 +236,9 @@ Pay ₹999
 
 <h2>MSME Registration</h2>
 
-<p>Quick MSME Registration</p>
+<p>
+Quick MSME Registration
+</p>
 
 <h3>₹299</h3>
 
@@ -224,7 +258,9 @@ Pay ₹299
 
 <h2>Company Registration</h2>
 
-<p>Pvt Ltd / LLP Registration</p>
+<p>
+Pvt Ltd / LLP Registration
+</p>
 
 <h3>₹1999</h3>
 
@@ -245,7 +281,9 @@ Pay ₹1999
 <section class="inquiry-form"
 id="formSection">
 
-<h2>Client Details Form</h2>
+<h2>
+Client Inquiry Form
+</h2>
 
 <form id="leadForm">
 
@@ -294,6 +332,18 @@ id="message"
 placeholder="Enter Your Details">
 </textarea>
 
+<label>
+Required Documents:
+</label>
+
+<textarea
+readonly>
+Aadhaar Card
+PAN Card
+Business Details
+Payment Screenshot
+</textarea>
+
 <button type="submit"
 class="submit-btn">
 Submit Inquiry
@@ -303,6 +353,12 @@ Submit Inquiry
 
 </section>
 
+<section class="review-section">
+
+<h2 class="review-title">
+Customer Reviews
+</h2>
+
 <div class="review-card">
 
 <h3>
@@ -310,7 +366,7 @@ Rahul Sharma ⭐⭐⭐⭐⭐
 </h3>
 
 <p>
-Very Fast GST Registration Service.
+Very fast GST registration service.
 </p>
 
 </div>
@@ -322,14 +378,30 @@ Aman Verma ⭐⭐⭐⭐⭐
 </h3>
 
 <p>
-Professional Income Tax Filing Support.
+Professional income tax filing support.
 </p>
 
 </div>
 
+<div class="review-card">
+
+<h3>
+Priya Singh ⭐⭐⭐⭐⭐
+</h3>
+
+<p>
+Easy MSME registration process.
+</p>
+
+</div>
+
+</section>
+
 <section class="contact">
 
-<h2>Contact Us</h2>
+<h2>
+Contact Us
+</h2>
 
 <p>
 📞 8840705418
@@ -425,9 +497,25 @@ document.getElementById(
 'leadForm'
 ).reset();
 
+document.getElementById(
+'formSection'
+).style.display='none';
+
 })
 
 .catch(error=>{
 
 alert(
-'Error Submitting
+'Submission Error'
+);
+
+});
+
+}
+);
+
+</script>
+
+</body>
+
+</html>
