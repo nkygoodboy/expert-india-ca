@@ -428,7 +428,25 @@ Date:new Date().toLocaleString()
 
 };
 
-fetch('https://sheetdb.io/api/v1/pjqy0ulsbv7ym',{
+fetch('https://script.google.com/macros/s/AKfycbyHi8XT2J5E46L73xvjOhuDy_reF3fzG3wmtJFn3G3HzM2pRwYcAuv3C7Q8pUMeiyV9/exec', {
+
+method:'POST',
+
+body:JSON.stringify({
+
+name:document.getElementById('name').value,
+
+mobile:document.getElementById('mobile').value,
+
+email:document.getElementById('email').value,
+
+service:document.getElementById('serviceName').value,
+
+details:document.getElementById('message').value
+
+})
+
+})
 
 method:'POST',
 
