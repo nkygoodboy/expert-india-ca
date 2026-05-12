@@ -1,57 +1,90 @@
-<section class="inquiry-form" id="formSection">
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Inquiry Form</h2>
+<head>
 
-<form id="leadForm">
+<meta charset="UTF-8">
 
-<input type="text"
-id="name"
-placeholder="Your Name"
-required>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<input type="tel"
-id="mobile"
-placeholder="Mobile Number"
-required>
-
-<select id="serviceName" required>
-
-<option value="">
-Select Service
-</option>
-
-<option value="GST Registration">
-GST Registration
-</option>
-
-<option value="Income Tax Filing">
-Income Tax Filing
-</option>
-
-<option value="MSME Registration">
-MSME Registration
-</option>
-
-<option value="Company Registration">
-Company Registration
-</option>
-
-</select>
-
-<textarea
-id="message"
-placeholder="Enter Your Message">
-</textarea>
-
-<button type="submit">
-Submit Inquiry
-</button>
-
-</form>
-
-</section>
+<title>Expert India CA</title>
 
 <style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f4f4;
+}
+
+header{
+background:#0d6efd;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+header h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:20px;
+}
+
+.services{
+padding:20px;
+display:grid;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h2{
+color:#0d6efd;
+font-size:34px;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:20px;
+}
+
+.card h3{
+font-size:42px;
+margin-top:20px;
+}
+
+.book-btn{
+background:#0d6efd;
+color:white;
+border:none;
+padding:16px 28px;
+border-radius:12px;
+font-size:20px;
+cursor:pointer;
+margin-top:15px;
+width:100%;
+}
+
+.pay-btn{
+display:block;
+background:#28a745;
+color:white;
+text-align:center;
+padding:16px;
+border-radius:12px;
+text-decoration:none;
+font-size:20px;
+margin-top:15px;
+}
 
 .inquiry-form{
 display:none;
@@ -73,46 +106,324 @@ textarea{
 width:100%;
 padding:18px;
 margin-top:15px;
-font-size:20px;
+font-size:18px;
 border-radius:10px;
 border:1px solid #ccc;
 box-sizing:border-box;
 }
 
-button{
+.submit-btn{
 background:#0d6efd;
 color:white;
 border:none;
-padding:16px 28px;
+padding:16px;
 border-radius:12px;
-font-size:22px;
+font-size:20px;
 cursor:pointer;
 margin-top:15px;
 width:100%;
 }
 
-button:hover{
-background:#0056d6;
+.reviews{
+padding:20px;
+}
+
+.reviews h2{
+text-align:center;
+font-size:34px;
+}
+
+.review-card{
+background:white;
+padding:20px;
+border-radius:15px;
+margin-top:15px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.review-card h3{
+margin:0;
+color:#0d6efd;
+}
+
+.stars{
+color:gold;
+font-size:24px;
+margin-top:10px;
+}
+
+.contact{
+background:#111;
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:40px;
+}
+
+.contact h2{
+font-size:34px;
+}
+
+.contact p{
+font-size:20px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:16px 25px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
 }
 
 </style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Expert India CA</h1>
+
+<p>
+GST | Income Tax | MSME | Company Registration
+</p>
+
+</header>
+
+<section class="services">
+
+<div class="card">
+
+<h2>GST Registration</h2>
+
+<p>Fast GST Registration Service</p>
+
+<h3>₹499</h3>
+
+<button class="book-btn"
+onclick="showInquiry('GST Registration')">
+Book Now
+</button>
+
+<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=499&cu=INR"
+class="pay-btn">
+Pay ₹499
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Income Tax Filing</h2>
+
+<p>Professional ITR Filing</p>
+
+<h3>₹999</h3>
+
+<button class="book-btn"
+onclick="showInquiry('Income Tax Filing')">
+Book Now
+</button>
+
+<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=999&cu=INR"
+class="pay-btn">
+Pay ₹999
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>MSME Registration</h2>
+
+<p>Quick MSME Registration</p>
+
+<h3>₹299</h3>
+
+<button class="book-btn"
+onclick="showInquiry('MSME Registration')">
+Book Now
+</button>
+
+<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=299&cu=INR"
+class="pay-btn">
+Pay ₹299
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Company Registration</h2>
+
+<p>Pvt Ltd / LLP Registration</p>
+
+<h3>₹1999</h3>
+
+<button class="book-btn"
+onclick="showInquiry('Company Registration')">
+Book Now
+</button>
+
+<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=1999&cu=INR"
+class="pay-btn">
+Pay ₹1999
+</a>
+
+</div>
+
+</section>
+
+<section class="inquiry-form"
+id="formSection">
+
+<h2>Inquiry Form</h2>
+
+<form id="leadForm">
+
+<input type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input type="tel"
+id="mobile"
+placeholder="Mobile Number"
+required>
+
+<select id="serviceName"
+required>
+
+<option value="">
+Select Service
+</option>
+
+<option>
+GST Registration
+</option>
+
+<option>
+Income Tax Filing
+</option>
+
+<option>
+MSME Registration
+</option>
+
+<option>
+Company Registration
+</option>
+
+</select>
+
+<textarea id="message"
+placeholder="Enter Your Message">
+</textarea>
+
+<button type="submit"
+class="submit-btn">
+Submit Inquiry
+</button>
+
+</form>
+
+</section>
+
+<section class="reviews">
+
+<h2>Customer Reviews</h2>
+
+<div class="review-card">
+
+<h3>Rahul Sharma</h3>
+
+<p>
+Very fast GST registration service.
+</p>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+<div class="review-card">
+
+<h3>Aman Verma</h3>
+
+<p>
+Professional CA support and quick response.
+</p>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+<div class="review-card">
+
+<h3>Priya Singh</h3>
+
+<p>
+Easy ITR filing process.
+</p>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📞 8840705418</p>
+
+<p>📧 nkygoodboy@gmail.com</p>
+
+</section>
+
+<a href="https://wa.me/918840705418"
+class="whatsapp">
+WhatsApp Us
+</a>
 
 <script>
 
 function showInquiry(service){
 
-document.getElementById('formSection').style.display='block';
+document.getElementById(
+'formSection'
+).style.display='block';
 
-document.getElementById('serviceName').value=service;
+document.getElementById(
+'serviceName'
+).value=service;
 
-document.getElementById('formSection').scrollIntoView({
+document.getElementById(
+'formSection'
+).scrollIntoView({
 behavior:'smooth'
 });
 
 }
 
-document.getElementById("leadForm")
-.addEventListener("submit", function(e){
+document.getElementById(
+"leadForm"
+).addEventListener(
+"submit",
+function(e){
 
 e.preventDefault();
 
@@ -123,16 +434,24 @@ data: [
 {
 
 Name:
-document.getElementById("name").value,
+document.getElementById(
+"name"
+).value,
 
 "Mobile number":
-document.getElementById("mobile").value,
+document.getElementById(
+"mobile"
+).value,
 
 Service:
-document.getElementById("serviceName").value,
+document.getElementById(
+"serviceName"
+).value,
 
 Details:
-document.getElementById("message").value,
+document.getElementById(
+"message"
+).value,
 
 Date:
 new Date().toLocaleString()
@@ -143,34 +462,50 @@ new Date().toLocaleString()
 
 };
 
-fetch("https://sheetdb.io/api/v1/pjqy0ulsbv7ym", {
+fetch(
+"https://sheetdb.io/api/v1/pjqy0ulsbv7ym",
+{
 
-method: "POST",
+method:"POST",
 
-headers: {
-"Content-Type":"application/json"
+headers:{
+"Content-Type":
+"application/json"
 },
 
-body: JSON.stringify(formData)
+body:JSON.stringify(formData)
 
-})
+}
 
-.then(response => response.json())
+)
+
+.then(response =>
+response.json())
 
 .then(data => {
 
-alert("Inquiry Submitted Successfully ✅");
+alert(
+"Inquiry Submitted Successfully ✅"
+);
 
-document.getElementById("leadForm").reset();
+document.getElementById(
+"leadForm"
+).reset();
 
 })
 
 .catch(error => {
 
-alert("Error submitting form");
+alert(
+"Error submitting form"
+);
 
 });
 
 });
 
 </script>
+
+</body>
+
+</html>
