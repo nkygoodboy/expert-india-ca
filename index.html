@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Expert India CA</title>
+
 <link rel="stylesheet" href="style.css">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
 <header class="hero">
-<div class="overlay"></div>
+
 <div class="hero-content">
+
 <h1>Expert India CA</h1>
-<p>GST • Income Tax • MSME • Company Registration</p>
+
+<p>
+GST • Income Tax • MSME • Company Registration
+</p>
+
 <div class="hero-buttons">
-<a href="tel:8840705418" class="btn primary">Call Now</a>
-<a href="#services" class="btn secondary">Explore Services</a>
+
+<a href="tel:8840705418" class="btn primary">
+Call Now
+</a>
+
+<a href="#services" class="btn secondary">
+Explore Services
+</a>
+
 </div>
+
 </div>
+
 </header>
 
 <section class="stats">
+
 <div class="stat-box">
 <h2>500+</h2>
 <p>Happy Clients</p>
@@ -37,6 +59,7 @@
 <h2>100%</h2>
 <p>Trusted Service</p>
 </div>
+
 </section>
 
 <section class="services" id="services">
@@ -45,44 +68,101 @@
 <h2>GST Registration</h2>
 <p>Fast GST Registration Services</p>
 <h3>₹499</h3>
+
 <button onclick="showInquiry('GST Registration - ₹499')">
 Book Now
 </button>
+
+<a href="https://rzp.io/l/testpayment" class="pay-btn">
+Pay Now
+</a>
+
 </div>
 
 <div class="card">
 <h2>Income Tax Filing</h2>
 <p>Professional ITR Filing Services</p>
 <h3>₹999</h3>
+
 <button onclick="showInquiry('Income Tax Filing - ₹999')">
 Book Now
 </button>
+
+<a href="https://rzp.io/l/testpayment" class="pay-btn">
+Pay Now
+</a>
+
 </div>
 
 <div class="card">
 <h2>MSME Registration</h2>
 <p>Quick MSME/Udyam Registration</p>
 <h3>₹299</h3>
+
 <button onclick="showInquiry('MSME Registration - ₹299')">
 Book Now
 </button>
+
+<a href="https://rzp.io/l/testpayment" class="pay-btn">
+Pay Now
+</a>
+
 </div>
 
 <div class="card">
 <h2>Company Registration</h2>
 <p>Pvt Ltd, LLP & OPC Registration</p>
 <h3>₹1999</h3>
+
 <button onclick="showInquiry('Company Registration - ₹1999')">
 Book Now
 </button>
+
+<a href="https://rzp.io/l/testpayment" class="pay-btn">
+Pay Now
+</a>
+
+</div>
+
+</section>
+
+<section class="reviews">
+
+<h2>Client Reviews</h2>
+
+<div class="review-slider">
+
+<div class="review-card">
+<p>
+“Very Fast GST Registration Service.”
+</p>
+<h4>- Rahul Sharma</h4>
+</div>
+
+<div class="review-card">
+<p>
+“Professional Income Tax Filing Support.”
+</p>
+<h4>- Aman Verma</h4>
+</div>
+
+<div class="review-card">
+<p>
+“Highly Recommended For MSME Registration.”
+</p>
+<h4>- Neha Singh</h4>
+</div>
+
 </div>
 
 </section>
 
 <section class="why-us">
+
 <h2>Why Choose Us?</h2>
 
 <div class="why-grid">
+
 <div class="why-card">
 <h3>Expert Team</h3>
 <p>Professional CA support with accurate filing.</p>
@@ -97,25 +177,9 @@ Book Now
 <h3>Secure & Trusted</h3>
 <p>Your documents and details stay secure.</p>
 </div>
-</div>
-</section>
 
-<section class="testimonial">
-<h2>Client Reviews</h2>
-
-<div class="review-box">
-<p>
-“Very fast GST registration service. Highly recommended!”
-</p>
-<h4>- Rahul Sharma</h4>
 </div>
 
-<div class="review-box">
-<p>
-“Professional income tax filing support.”
-</p>
-<h4>- Aman Verma</h4>
-</div>
 </section>
 
 <section class="inquiry-form" id="formSection">
@@ -173,6 +237,24 @@ Submit Inquiry
 WhatsApp Us
 </a>
 
+<div class="popup" id="thankPopup">
+
+<div class="popup-box">
+
+<h2>Thank You 🎉</h2>
+
+<p>
+Our Team Will Contact You Soon.
+</p>
+
+<button onclick="closePopup()">
+Close
+</button>
+
+</div>
+
+</div>
+
 <script>
 
 function showInquiry(service){
@@ -187,7 +269,26 @@ behavior:'smooth'
 
 }
 
+const form=document.querySelector('form');
+
+form.addEventListener('submit',function(){
+
+setTimeout(()=>{
+
+document.getElementById('thankPopup').style.display='flex';
+
+},1000)
+
+})
+
+function closePopup(){
+
+document.getElementById('thankPopup').style.display='none';
+
+}
+
 </script>
 
 </body>
+
 </html>
