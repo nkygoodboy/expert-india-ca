@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expert India CA</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Expert India CA</h1>
+
+<p>
+GST | Income Tax | MSME | Company Registration
+</p>
+
+</header>
+
+<section class="services">
+
+<div class="card">
+
+<h2>GST Registration</h2>
+
+<p>Fast GST Registration Services</p>
+
+<h3>₹499</h3>
+
+<button onclick="showInquiry('GST Registration - ₹499')">
+Book Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Income Tax Filing</h2>
+
+<p>Professional ITR Filing Services</p>
+
+<h3>₹999</h3>
+
+<button onclick="showInquiry('Income Tax Filing - ₹999')">
+Book Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>MSME Registration</h2>
+
+<p>Quick MSME/Udyam Registration</p>
+
+<h3>₹299</h3>
+
+<button onclick="showInquiry('MSME Registration - ₹299')">
+Book Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Company Registration</h2>
+
+<p>Pvt Ltd, LLP & OPC Registration</p>
+
+<h3>₹1999</h3>
+
+<button onclick="showInquiry('Company Registration - ₹1999')">
+Book Now
+</button>
+
+</div>
+
+</section>
+
+<section class="inquiry-form" id="formSection">
+
+<h2>Inquiry Form</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="tel" placeholder="Mobile Number" required>
+
+<input type="text" id="serviceName" readonly>
+
+<button type="submit">
+Submit Inquiry
+</button>
+
+</form>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📞 8840705418</p>
+
+<p>📧 nkygoodboy@gmail.com</p>
+
+</section>
+
+<a href="https://wa.me/918840705418" class="whatsapp">
+WhatsApp Us
+</a>
+
+<script>
+
+function showInquiry(service){
+
+document.getElementById('formSection').style.display='block';
+
+document.getElementById('serviceName').value=service;
+
+document.getElementById('formSection').scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
