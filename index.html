@@ -9,60 +9,19 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<header class="hero">
-
-<div class="hero-content">
-
+<header>
 <h1>Expert India CA</h1>
 
 <p>
-GST • Income Tax • MSME • Company Registration
+GST | Income Tax | MSME | Company Registration
 </p>
-
-<div class="hero-buttons">
-
-<a href="tel:8840705418" class="btn primary">
-Call Now
-</a>
-
-<a href="#services" class="btn secondary">
-Explore Services
-</a>
-
-</div>
-
-</div>
-
 </header>
 
-<section class="stats">
-
-<div class="stat-box">
-<h2>500+</h2>
-<p>Happy Clients</p>
-</div>
-
-<div class="stat-box">
-<h2>24x7</h2>
-<p>Support</p>
-</div>
-
-<div class="stat-box">
-<h2>100%</h2>
-<p>Trusted Service</p>
-</div>
-
-</section>
-
-<section class="services" id="services">
+<section class="services">
 
 <div class="card">
 <h2>GST Registration</h2>
@@ -72,12 +31,6 @@ Explore Services
 <button onclick="showInquiry('GST Registration - ₹499')">
 Book Now
 </button>
-
-<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=499&cu=INR"
-class="pay-btn">
-Pay ₹499
-</a>
-
 </div>
 
 <div class="card">
@@ -88,11 +41,6 @@ Pay ₹499
 <button onclick="showInquiry('Income Tax Filing - ₹999')">
 Book Now
 </button>
-
-<a href="https://rzp.io/l/testpayment" class="pay-btn">
-Pay Now
-</a>
-
 </div>
 
 <div class="card">
@@ -103,11 +51,6 @@ Pay Now
 <button onclick="showInquiry('MSME Registration - ₹299')">
 Book Now
 </button>
-
-<a href="https://rzp.io/l/testpayment" class="pay-btn">
-Pay Now
-</a>
-
 </div>
 
 <div class="card">
@@ -118,67 +61,6 @@ Pay Now
 <button onclick="showInquiry('Company Registration - ₹1999')">
 Book Now
 </button>
-
-<a href="https://rzp.io/l/testpayment" class="pay-btn">
-Pay Now
-</a>
-
-</div>
-
-</section>
-
-<section class="reviews">
-
-<h2>Client Reviews</h2>
-
-<div class="review-slider">
-
-<div class="review-card">
-<p>
-“Very Fast GST Registration Service.”
-</p>
-<h4>- Rahul Sharma</h4>
-</div>
-
-<div class="review-card">
-<p>
-“Professional Income Tax Filing Support.”
-</p>
-<h4>- Aman Verma</h4>
-</div>
-
-<div class="review-card">
-<p>
-“Highly Recommended For MSME Registration.”
-</p>
-<h4>- Neha Singh</h4>
-</div>
-
-</div>
-
-</section>
-
-<section class="why-us">
-
-<h2>Why Choose Us?</h2>
-
-<div class="why-grid">
-
-<div class="why-card">
-<h3>Expert Team</h3>
-<p>Professional CA support with accurate filing.</p>
-</div>
-
-<div class="why-card">
-<h3>Fast Processing</h3>
-<p>Quick service and instant customer support.</p>
-</div>
-
-<div class="why-card">
-<h3>Secure & Trusted</h3>
-<p>Your documents and details stay secure.</p>
-</div>
-
 </div>
 
 </section>
@@ -187,34 +69,21 @@ Pay Now
 
 <h2>Inquiry Form</h2>
 
-<form action="https://formsubmit.co/nkygoodboy@gmail.com" method="POST">
+<form id="leadForm">
 
 <input type="text"
-name="Name"
+id="name"
 placeholder="Your Name"
 required>
 
 <input type="tel"
-name="Mobile"
+id="mobile"
 placeholder="Mobile Number"
 required>
 
 <input type="text"
 id="serviceName"
-name="Service"
 readonly>
-
-<input type="hidden"
-name="_captcha"
-value="false">
-
-<input type="hidden"
-name="_subject"
-value="New Inquiry From Website">
-
-<input type="hidden"
-name="_next"
-value="https://chimerical-palmier-5cc70d1.netlify.app/">
 
 <button type="submit">
 Submit Inquiry
@@ -238,24 +107,6 @@ Submit Inquiry
 WhatsApp Us
 </a>
 
-<div class="popup" id="thankPopup">
-
-<div class="popup-box">
-
-<h2>Thank You 🎉</h2>
-
-<p>
-Our Team Will Contact You Soon.
-</p>
-
-<button onclick="closePopup()">
-Close
-</button>
-
-</div>
-
-</div>
-
 <script>
 
 function showInquiry(service){
@@ -270,23 +121,33 @@ behavior:'smooth'
 
 }
 
-const form=document.querySelector('form');
+document.getElementById("leadForm")
+.addEventListener("submit", async function(e){
 
-form.addEventListener('submit',function(){
+e.preventDefault();
 
-setTimeout(()=>{
+const data = {
+data: [{
+Name: document.getElementById("name").value,
+"Mobile number": document.getElementById("mobile").value,
+service: document.getElementById("serviceName").value,
+date: new Date().toLocaleString()
+}]
+};
 
-document.getElementById('thankPopup').style.display='flex';
+await fetch("https://sheetdb.io/api/v1/pjqy0ulsbv7ym", {
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify(data)
+});
 
-},1000)
+alert("Inquiry Submitted Successfully ✅");
 
-})
+document.getElementById("leadForm").reset();
 
-function closePopup(){
-
-document.getElementById('thankPopup').style.display='none';
-
-}
+});
 
 </script>
 
