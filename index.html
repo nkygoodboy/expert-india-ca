@@ -2,11 +2,8 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Expert India CA</title>
 
@@ -148,7 +145,6 @@ font-weight:bold;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -299,8 +295,6 @@ id="message"
 placeholder="Enter Your Details">
 </textarea>
 
-<div id="dynamicDocuments"></div>
-
 <button type="submit"
 class="submit-btn">
 Submit Inquiry
@@ -322,4 +316,130 @@ Very Fast GST Registration Service.
 
 </div>
 
-<div class="
+<div class="review-card">
+
+<h3>
+Aman Verma ⭐⭐⭐⭐⭐
+</h3>
+
+<p>
+Professional Income Tax Filing Support.
+</p>
+
+</div>
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<p>
+📞 8840705418
+</p>
+
+<p>
+📧 nkygoodboy@gmail.com
+</p>
+
+</section>
+
+<a href="https://wa.me/918840705418"
+class="whatsapp">
+WhatsApp Us
+</a>
+
+<script>
+
+function showInquiry(service){
+
+document.getElementById(
+'formSection'
+).style.display='block';
+
+document.getElementById(
+'serviceName'
+).value=service;
+
+document.getElementById(
+'formSection'
+).scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
+document.getElementById(
+'leadForm'
+).addEventListener(
+'submit',
+function(e){
+
+e.preventDefault();
+
+fetch(
+'https://script.google.com/macros/s/AKfycbyHi8XT2J5E46L73xvjOhuDy_reF3fzG3wmtJFn3G3HzM2pRwYcAuv3C7Q8pUMeiyV9/exec',
+
+{
+
+method:'POST',
+
+headers:{
+'Content-Type':'application/json'
+},
+
+body:JSON.stringify({
+
+name:document.getElementById(
+'name'
+).value,
+
+mobile:document.getElementById(
+'mobile'
+).value,
+
+email:document.getElementById(
+'email'
+).value,
+
+service:document.getElementById(
+'serviceName'
+).value,
+
+details:document.getElementById(
+'message'
+).value
+
+})
+
+}
+
+)
+
+.then(response=>response.json())
+
+.then(data=>{
+
+alert(
+'Inquiry Submitted Successfully ✅'
+);
+
+document.getElementById(
+'leadForm'
+).reset();
+
+})
+
+.catch(error=>{
+
+alert(
+'Error Submitting Form'
+);
+
+});
+
+}
+);
+
+</script>
+
+</body>
+</html>
