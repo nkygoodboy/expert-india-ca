@@ -135,7 +135,7 @@ src="https://docs.google.com/spreadsheets/d/1xVoVirgX3E40faJr19rqgVbxK-PioV2058j
 async function loadCounts(){
 
 const response = await fetch(
-'https://script.google.com/macros/s/AKfycbyHi8XT2J5E46L73xvjOhuDy_reF3fzG3wmtJFn3G3HzM2pRwYcAuv3C7Q8pUMeiyV9/exec'
+'https://script.google.com/macros/s/AKfycbzHVbNXLClb5PqRkAH3RdCqGyJek72NG5rGKUealYS3oA4w6JcO5qv5ujQfzxle3OKltw/exec'
 );
 
 const data = await response.json();
@@ -165,6 +165,7 @@ loadCounts();
 setInterval(loadCounts,5000);
 
 </script>
+
 <script>
 
 document.getElementById(
