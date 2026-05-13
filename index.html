@@ -1,3 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expert India CA</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+scroll-behavior:smooth;
+}
+
+header{
+background:linear-gradient(135deg,#005eff,#00a2ff);
+color:white;
+padding:60px 20px;
+text-align:center;
+}
+
+header h1{
+margin:0;
+font-size:42px;
+}
+
+header p{
+font-size:20px;
+margin-top:10px;
+}
+
+.services{
+padding:20px;
+display:grid;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h2{
+color:#005eff;
+margin-top:0;
+font-size:30px;
+}
+
+.card h3{
+font-size:40px;
+}
+
+.book-btn{
+background:#005eff;
+color:white;
+border:none;
+padding:15px;
+border-radius:12px;
+font-size:18px;
+width:100%;
+margin-top:10px;
+cursor:pointer;
+}
+
+.pay-btn{
+display:block;
+background:#28a745;
+color:white;
+text-decoration:none;
+padding:15px;
+text-align:center;
+border-radius:12px;
+margin-top:10px;
+font-size:18px;
+}
+
+.inquiry-form{
+background:white;
+padding:20px;
+margin:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+display:none;
+}
+
+.inquiry-form h2{
+color:#005eff;
+font-size:32px;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:15px;
+margin-top:12px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:17px;
+box-sizing:border-box;
+}
+
+label{
+display:block;
+margin-top:15px;
+font-weight:bold;
+}
+
+.submit-btn{
+background:#005eff;
+color:white;
+border:none;
+padding:16px;
+width:100%;
+border-radius:12px;
+font-size:20px;
+margin-top:20px;
+cursor:pointer;
+}
+
+.review-section{
+padding:20px;
+}
+
+.review-title{
+font-size:34px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.review-card{
+background:white;
+padding:20px;
+margin-top:15px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact{
+background:#111;
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:30px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Expert India CA</h1>
+
+<p>
+GST | Income Tax | MSME | Company Registration
+</p>
+
+</header>
+
 <section style="
 padding:25px 15px;
 display:grid;
@@ -143,3 +329,157 @@ Company Registration
 </div>
 
 </section>
+
+<section class="services">
+
+<div class="card">
+
+<h2>GST Registration</h2>
+
+<p>
+Fast GST Registration Services
+</p>
+
+<h3>₹499</h3>
+
+<button class="book-btn"
+onclick="showInquiry('GST Registration')">
+Book Now
+</button>
+
+<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=499&cu=INR"
+class="pay-btn">
+Pay ₹499
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Income Tax Filing</h2>
+
+<p>
+Professional ITR Filing Services
+</p>
+
+<h3>₹999</h3>
+
+<button class="book-btn"
+onclick="showInquiry('Income Tax Filing')">
+Book Now
+</button>
+
+<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=999&cu=INR"
+class="pay-btn">
+Pay ₹999
+</a>
+
+</div>
+
+</section>
+
+<section style="
+padding:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+">
+
+<div style="
+background:white;
+padding:20px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+">
+
+<h2 style="
+margin:0;
+font-size:32px;
+color:#005eff;
+">
+500+
+</h2>
+
+<p style="
+margin-top:10px;
+font-size:18px;
+font-weight:bold;
+">
+Verified Clients
+</p>
+
+</div>
+
+<div style="
+background:white;
+padding:20px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+">
+
+<h2 style="
+margin:0;
+font-size:32px;
+color:#005eff;
+">
+100%
+</h2>
+
+<p style="
+margin-top:10px;
+font-size:18px;
+font-weight:bold;
+">
+Trusted Service
+</p>
+
+</div>
+
+</section>
+
+<section class="review-section">
+
+<h2 class="review-title">
+Customer Reviews
+</h2>
+
+<div class="review-card">
+
+<h3>
+Rahul Sharma ⭐⭐⭐⭐⭐
+</h3>
+
+<p>
+Very fast GST registration service.
+</p>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2>
+Contact Us
+</h2>
+
+<p>
+📞 8840705418
+</p>
+
+<p>
+📧 nkygoodboy@gmail.com
+</p>
+
+</section>
+
+<a href="https://wa.me/918840705418"
+class="whatsapp">
+WhatsApp Us
+</a>
+
+</body>
+
+</html>
