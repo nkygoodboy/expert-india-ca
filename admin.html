@@ -132,9 +132,15 @@ src="https://docs.google.com/spreadsheets/d/1xVoVirgX3E40faJr19rqgVbxK-PioV2058j
 
 <script>
 
-setTimeout(function(){
+async function loadCounts(){
 
-const total = 5;
+const response = await fetch(
+'https://script.google.com/macros/s/AKfycbyHi8XT2J5E46L73xvjOhuDy_reF3fzG3wmtJFn3G3HzM2pRwYcAuv3C7Q8pUMeiyV9/exec'
+);
+
+const data = await response.json();
+
+const total = data.length - 1;
 
 document.getElementById(
 'totalLeads'
@@ -147,3 +153,15 @@ document.getElementById(
 document.getElementById(
 'paidLeads'
 ).innerHTML = 0;
+
+document.getElementById(
+'completedLeads'
+).innerHTML = 0;
+
+}
+
+loadCounts();
+
+setInterval(loadCounts,5000);
+
+</script>
