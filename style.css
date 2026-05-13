@@ -16,15 +16,7 @@ overflow:hidden;
 animation:fadeDown 1s ease;
 }
 
-<section style="
-background:white;
-padding:15px;
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
-">
+
 
 <div style="
 background:#f4f7fb;
