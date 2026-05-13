@@ -165,6 +165,34 @@ document.getElementById(
 </script>
 
 </script>
+<script>
+
+setTimeout(function(){
+
+const rows =
+document.querySelectorAll("table tr");
+
+let total = rows.length - 1;
+
+document.getElementById(
+'totalLeads'
+).innerHTML = total;
+
+document.getElementById(
+'pendingLeads'
+).innerHTML = total;
+
+document.getElementById(
+'paidLeads'
+).innerHTML = 0;
+
+document.getElementById(
+'completedLeads'
+).innerHTML = 0;
+
+},3000);
+
+</script>
 
 </body>
 
