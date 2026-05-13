@@ -573,6 +573,19 @@ service:data.service,
 email:data.email
 }
 );
+
+emailjs.send(
+'service_0yb0k42',
+'template_nwzxfpg',
+{
+name:data.name,
+mobile:data.mobile,
+email:data.email,
+service:data.service,
+details:data.details
+}
+);
+
 alert(
 'Inquiry Submitted Successfully ✅'
 );
