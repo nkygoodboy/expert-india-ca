@@ -564,7 +564,15 @@ body:JSON.stringify(data)
 )
 
 .then(function(){
-
+emailjs.send(
+'service_0yb0k42',
+'template_jdc7vru',
+{
+name:data.name,
+service:data.service,
+email:data.email
+}
+);
 alert(
 'Inquiry Submitted Successfully ✅'
 );
@@ -606,5 +614,11 @@ submitBtn.disabled=false;
 
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script>
+
+emailjs.init("OE311CsBk9pFLCQLm");
+
+</script>
 </html>
