@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -20,7 +19,7 @@ scroll-behavior:smooth;
 header{
 background:linear-gradient(135deg,#005eff,#00a2ff);
 color:white;
-padding:60px 20px;
+padding:70px 20px;
 text-align:center;
 }
 
@@ -34,6 +33,32 @@ font-size:20px;
 margin-top:10px;
 }
 
+.top-services{
+padding:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+.top-card{
+background:white;
+padding:20px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.top-card img{
+width:75px;
+height:75px;
+object-fit:contain;
+}
+
+.top-card h3{
+margin-top:12px;
+font-size:22px;
+}
+
 .services{
 padding:20px;
 display:grid;
@@ -45,11 +70,6 @@ background:white;
 padding:20px;
 border-radius:18px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
 }
 
 .card h2{
@@ -86,48 +106,30 @@ margin-top:10px;
 font-size:18px;
 }
 
-.inquiry-form{
+.stats{
+padding:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.stat-box{
 background:white;
 padding:20px;
-margin:20px;
 border-radius:18px;
+text-align:center;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-display:none;
 }
 
-.inquiry-form h2{
+.stat-box h2{
+margin:0;
+font-size:34px;
 color:#005eff;
-font-size:32px;
 }
 
-input,
-select,
-textarea{
-width:100%;
-padding:15px;
-margin-top:12px;
-border-radius:10px;
-border:1px solid #ccc;
-font-size:17px;
-box-sizing:border-box;
-}
-
-label{
-display:block;
-margin-top:15px;
+.stat-box p{
+font-size:18px;
 font-weight:bold;
-}
-
-.submit-btn{
-background:#005eff;
-color:white;
-border:none;
-padding:16px;
-width:100%;
-border-radius:12px;
-font-size:20px;
-margin-top:20px;
-cursor:pointer;
 }
 
 .review-section{
@@ -184,147 +186,37 @@ GST | Income Tax | MSME | Company Registration
 
 </header>
 
-<section style="
-padding:25px 15px;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px;
-background:#f4f7fb;
-">
+<section class="top-services">
 
-<div style="
-background:white;
-border-radius:22px;
-padding:20px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-">
+<div class="top-card">
 
-<img
-src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-style="
-width:80px;
-height:80px;
-object-fit:contain;
-">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 
-<h3 style="
-margin-top:15px;
-font-size:22px;
-color:#111;
-">
-GST
-</h3>
-
-<p style="
-color:#666;
-font-size:15px;
-margin-top:8px;
-">
-Registration Service
-</p>
+<h3>GST</h3>
 
 </div>
 
-<div style="
-background:white;
-border-radius:22px;
-padding:20px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-">
+<div class="top-card">
 
-<img
-src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png"
-style="
-width:80px;
-height:80px;
-object-fit:contain;
-">
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
 
-<h3 style="
-margin-top:15px;
-font-size:22px;
-color:#111;
-">
-Income Tax
-</h3>
-
-<p style="
-color:#666;
-font-size:15px;
-margin-top:8px;
-">
-ITR Filing Service
-</p>
+<h3>Income Tax</h3>
 
 </div>
 
-<div style="
-background:white;
-border-radius:22px;
-padding:20px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-">
+<div class="top-card">
 
-<img
-src="https://cdn-icons-png.flaticon.com/512/1041/1041884.png"
-style="
-width:80px;
-height:80px;
-object-fit:contain;
-">
+<img src="https://cdn-icons-png.flaticon.com/512/1041/1041884.png">
 
-<h3 style="
-margin-top:15px;
-font-size:22px;
-color:#111;
-">
-MSME
-</h3>
-
-<p style="
-color:#666;
-font-size:15px;
-margin-top:8px;
-">
-MSME Registration
-</p>
+<h3>MSME</h3>
 
 </div>
 
-<div style="
-background:white;
-border-radius:22px;
-padding:20px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-">
+<div class="top-card">
 
-<img
-src="https://cdn-icons-png.flaticon.com/512/942/942748.png"
-style="
-width:80px;
-height:80px;
-object-fit:contain;
-">
+<img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
 
-<h3 style="
-margin-top:15px;
-font-size:22px;
-color:#111;
-">
-Company
-</h3>
-
-<p style="
-color:#666;
-font-size:15px;
-margin-top:8px;
-">
-Company Registration
-</p>
+<h3>Company</h3>
 
 </div>
 
@@ -336,18 +228,16 @@ Company Registration
 
 <h2>GST Registration</h2>
 
-<p>
-Fast GST Registration Services
-</p>
+<p>Fast GST Registration Services</p>
 
 <h3>₹499</h3>
 
-<button class="book-btn"
-onclick="showInquiry('GST Registration')">
+<button class="book-btn">
 Book Now
 </button>
 
-<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=499&cu=INR"
+<a
+href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=499&cu=INR"
 class="pay-btn">
 Pay ₹499
 </a>
@@ -358,82 +248,95 @@ Pay ₹499
 
 <h2>Income Tax Filing</h2>
 
-<p>
-Professional ITR Filing Services
-</p>
+<p>Professional ITR Filing Services</p>
 
 <h3>₹999</h3>
 
-<button class="book-btn"
-onclick="showInquiry('Income Tax Filing')">
+<button class="book-btn">
 Book Now
 </button>
 
-<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=999&cu=INR"
+<a
+href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=999&cu=INR"
 class="pay-btn">
 Pay ₹999
 </a>
 
 </div>
 
-</section>
+<div class="card">
 
-<section style="
-padding:20px;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-">
+<h2>MSME Registration</h2>
 
-<div style="
-background:white;
-padding:20px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-">
+<p>Quick MSME Registration</p>
 
-<h2 style="
-margin:0;
-font-size:32px;
-color:#005eff;
-">
-500+
-</h2>
+<h3>₹299</h3>
 
-<p style="
-margin-top:10px;
-font-size:18px;
-font-weight:bold;
-">
-Verified Clients
-</p>
+<button class="book-btn">
+Book Now
+</button>
+
+<a
+href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=299&cu=INR"
+class="pay-btn">
+Pay ₹299
+</a>
 
 </div>
 
-<div style="
-background:white;
-padding:20px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-">
+<div class="card">
 
-<h2 style="
-margin:0;
-font-size:32px;
-color:#005eff;
-">
-100%
-</h2>
+<h2>Company Registration</h2>
 
-<p style="
-margin-top:10px;
-font-size:18px;
-font-weight:bold;
-">
-Trusted Service
-</p>
+<p>Pvt Ltd / LLP Registration</p>
+
+<h3>₹1999</h3>
+
+<button class="book-btn">
+Book Now
+</button>
+
+<a
+href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=1999&cu=INR"
+class="pay-btn">
+Pay ₹1999
+</a>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat-box">
+
+<h2>500+</h2>
+
+<p>Verified Clients</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>100%</h2>
+
+<p>Trusted Service</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>24×7</h2>
+
+<p>Customer Support</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>4.9★</h2>
+
+<p>Client Rating</p>
 
 </div>
 
@@ -447,12 +350,20 @@ Customer Reviews
 
 <div class="review-card">
 
-<h3>
-Rahul Sharma ⭐⭐⭐⭐⭐
-</h3>
+<h3>Rahul Sharma ⭐⭐⭐⭐⭐</h3>
 
 <p>
 Very fast GST registration service.
+</p>
+
+</div>
+
+<div class="review-card">
+
+<h3>Aman Verma ⭐⭐⭐⭐⭐</h3>
+
+<p>
+Professional income tax filing support.
 </p>
 
 </div>
@@ -461,25 +372,19 @@ Very fast GST registration service.
 
 <section class="contact">
 
-<h2>
-Contact Us
-</h2>
+<h2>Contact Us</h2>
 
-<p>
-📞 8840705418
-</p>
+<p>📞 8840705418</p>
 
-<p>
-📧 nkygoodboy@gmail.com
-</p>
+<p>📧 nkygoodboy@gmail.com</p>
 
 </section>
 
-<a href="https://wa.me/918840705418"
+<a
+href="https://wa.me/918840705418"
 class="whatsapp">
 WhatsApp Us
 </a>
 
 </body>
-
 </html>
