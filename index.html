@@ -1,390 +1,690 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html>  <html lang="en">  <head>  <meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Expert India CA</title>  <style>  
+  
+body{  
+margin:0;  
+font-family:Arial,sans-serif;  
+background:#f4f7fb;  
+scroll-behavior:smooth;  
+}  
+  
+header{  
+background:linear-gradient(135deg,#005eff,#00a2ff);  
+color:white;  
+padding:60px 20px;  
+text-align:center;  
+}  
+  
+header h1{  
+margin:0;  
+font-size:42px;  
+}  
+  
+header p{  
+font-size:20px;  
+margin-top:10px;  
+}  
+  
+.services{  
+padding:20px;  
+display:grid;  
+gap:20px;  
+}  
+  
+.card{  
+background:white;  
+padding:20px;  
+border-radius:18px;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+transition:0.3s;  
+}  
+  
+.card:hover{  
+transform:translateY(-5px);  
+}  
+  
+.card h2{  
+color:#005eff;  
+margin-top:0;  
+font-size:30px;  
+}  
+  
+.card h3{  
+font-size:40px;  
+}  
+  
+.book-btn{  
+background:#005eff;  
+color:white;  
+border:none;  
+padding:15px;  
+border-radius:12px;  
+font-size:18px;  
+width:100%;  
+margin-top:10px;  
+cursor:pointer;  
+}  
+  
+.pay-btn{  
+display:block;  
+background:#28a745;  
+color:white;  
+text-decoration:none;  
+padding:15px;  
+text-align:center;  
+border-radius:12px;  
+margin-top:10px;  
+font-size:18px;  
+}  
+  
+.inquiry-form{  
+background:white;  
+padding:20px;  
+margin:20px;  
+border-radius:18px;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+display:none;  
+}  
+  
+.inquiry-form h2{  
+color:#005eff;  
+font-size:32px;  
+}  
+  
+input,  
+select,  
+textarea{  
+width:100%;  
+padding:15px;  
+margin-top:12px;  
+border-radius:10px;  
+border:1px solid #ccc;  
+font-size:17px;  
+box-sizing:border-box;  
+}  
+  
+label{  
+display:block;  
+margin-top:15px;  
+font-weight:bold;  
+}  
+  
+.submit-btn{  
+background:#005eff;  
+color:white;  
+border:none;  
+padding:16px;  
+width:100%;  
+border-radius:12px;  
+font-size:20px;  
+margin-top:20px;  
+cursor:pointer;  
+}  
+  
+.review-section{  
+padding:20px;  
+}  
+  
+.review-title{  
+font-size:34px;  
+text-align:center;  
+margin-bottom:20px;  
+}  
+  
+.review-card{  
+background:white;  
+padding:20px;  
+margin-top:15px;  
+border-radius:15px;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+}  
+  
+.contact{  
+background:#111;  
+color:white;  
+text-align:center;  
+padding:40px 20px;  
+margin-top:30px;  
+}  
+  
+.whatsapp{  
+position:fixed;  
+right:20px;  
+bottom:20px;  
+background:#25D366;  
+color:white;  
+padding:15px 20px;  
+text-decoration:none;  
+border-radius:50px;  
+font-weight:bold;  
+}  
+  
+</style>  </head>  <body>  <header>  <h1>Expert India CA</h1>  <p>  
+GST | Income Tax | MSME | Company Registration  
+</p>  </header>  <section style="  
+display:flex;  
+justify-content:center;  
+gap:20px;  
+padding:25px 15px;  
+flex-wrap:wrap;  
+">  <div style="  
+background:white;  
+padding:15px;  
+border-radius:20px;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+text-align:center;  
+width:120px;  
+">  <img  
+src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"  
+style="  
+width:70px;  
+height:70px;  
+object-fit:contain;  
+">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<p style="  
+margin-top:10px;  
+font-weight:bold;  
+font-size:16px;  
+">  
+GST  
+</p>  </div>  <div style="  
+background:white;  
+padding:15px;  
+border-radius:20px;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+text-align:center;  
+width:120px;  
+">  <img  
+src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png"  
+style="  
+width:70px;  
+height:70px;  
+object-fit:contain;  
+">
 
-<title>Expert India CA</title>
+<p style="  
+margin-top:10px;  
+font-weight:bold;  
+font-size:16px;  
+">  
+Income Tax  
+</p>  </div>  <div style="  
+background:white;  
+padding:15px;  
+border-radius:20px;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+text-align:center;  
+width:120px;  
+">  <img  
+src="https://cdn-icons-png.flaticon.com/512/1041/1041884.png"  
+style="  
+width:70px;  
+height:70px;  
+object-fit:contain;  
+">
 
-<style>
+<p style="  
+margin-top:10px;  
+font-weight:bold;  
+font-size:16px;  
+">  
+MSME  
+</p>  </div>  <div style="  
+background:white;  
+padding:15px;  
+border-radius:20px;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+text-align:center;  
+width:120px;  
+">  <img  
+src="https://cdn-icons-png.flaticon.com/512/942/942748.png"  
+style="  
+width:70px;  
+height:70px;  
+object-fit:contain;  
+">
 
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f4f7fb;
-scroll-behavior:smooth;
-}
-
-header{
-background:linear-gradient(135deg,#005eff,#00a2ff);
-color:white;
-padding:70px 20px;
-text-align:center;
-}
-
-header h1{
-margin:0;
-font-size:42px;
-}
-
-header p{
-font-size:20px;
-margin-top:10px;
-}
-
-.top-services{
-padding:20px;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px;
-}
-
-.top-card{
-background:white;
-padding:20px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.top-card img{
-width:75px;
-height:75px;
-object-fit:contain;
-}
-
-.top-card h3{
-margin-top:12px;
-font-size:22px;
-}
-
-.services{
-padding:20px;
-display:grid;
-gap:20px;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:18px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.card h2{
-color:#005eff;
-margin-top:0;
-font-size:30px;
-}
-
-.card h3{
-font-size:40px;
-}
-
-.book-btn{
-background:#005eff;
-color:white;
-border:none;
-padding:15px;
-border-radius:12px;
-font-size:18px;
-width:100%;
-margin-top:10px;
-cursor:pointer;
-}
-
-.pay-btn{
-display:block;
-background:#28a745;
-color:white;
-text-decoration:none;
-padding:15px;
-text-align:center;
-border-radius:12px;
-margin-top:10px;
-font-size:18px;
-}
-
-.stats{
-padding:20px;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-}
-
-.stat-box{
-background:white;
-padding:20px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.stat-box h2{
-margin:0;
-font-size:34px;
-color:#005eff;
-}
-
-.stat-box p{
-font-size:18px;
-font-weight:bold;
-}
-
-.review-section{
-padding:20px;
-}
-
-.review-title{
-font-size:34px;
-text-align:center;
-margin-bottom:20px;
-}
-
-.review-card{
-background:white;
-padding:20px;
-margin-top:15px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.contact{
-background:#111;
-color:white;
-text-align:center;
-padding:40px 20px;
-margin-top:30px;
-}
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-text-decoration:none;
-border-radius:50px;
-font-weight:bold;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>Expert India CA</h1>
-
-<p>
-GST | Income Tax | MSME | Company Registration
-</p>
-
-</header>
-
-<section class="top-services">
-
-<div class="top-card">
-
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-
-<h3>GST</h3>
-
-</div>
-
-<div class="top-card">
-
-<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
-
-<h3>Income Tax</h3>
-
-</div>
-
-<div class="top-card">
-
-<img src="https://cdn-icons-png.flaticon.com/512/1041/1041884.png">
-
-<h3>MSME</h3>
-
-</div>
-
-<div class="top-card">
-
-<img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
-
-<h3>Company</h3>
-
-</div>
-
-</section>
-
-<section class="services">
-
-<div class="card">
-
-<h2>GST Registration</h2>
-
-<p>Fast GST Registration Services</p>
-
-<h3>₹499</h3>
-
-<button class="book-btn">
+<p style="  
+margin-top:10px;  
+font-weight:bold;  
+font-size:16px;  
+">  
+Company  
+</p>  </div>  </section>  <section class="services">  <div class="card">  <h2>GST Registration</h2>  <p>  
+Fast GST Registration Services  
+</p>  <h3>₹499</h3>  <button class="book-btn"  
+onclick="showInquiry('GST Registration')">
 Book Now
 </button>
 
-<a
-href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=499&cu=INR"
+<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=499&cu=INR"  
 class="pay-btn">
 Pay ₹499
 </a>
 
-</div>
-
-<div class="card">
-
-<h2>Income Tax Filing</h2>
-
-<p>Professional ITR Filing Services</p>
-
-<h3>₹999</h3>
-
-<button class="book-btn">
+</div>  <div class="card">  <h2>Income Tax Filing</h2>  <p>  
+Professional ITR Filing Services  
+</p>  <h3>₹999</h3>  <button class="book-btn"  
+onclick="showInquiry('Income Tax Filing')">
 Book Now
 </button>
 
-<a
-href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=999&cu=INR"
+<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=999&cu=INR"  
 class="pay-btn">
 Pay ₹999
 </a>
 
-</div>
-
-<div class="card">
-
-<h2>MSME Registration</h2>
-
-<p>Quick MSME Registration</p>
-
-<h3>₹299</h3>
-
-<button class="book-btn">
+</div>  <div class="card">  <h2>MSME Registration</h2>  <p>  
+Quick MSME Registration  
+</p>  <h3>₹299</h3>  <button class="book-btn"  
+onclick="showInquiry('MSME Registration')">
 Book Now
 </button>
 
-<a
-href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=299&cu=INR"
+<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=299&cu=INR"  
 class="pay-btn">
 Pay ₹299
 </a>
 
-</div>
-
-<div class="card">
-
-<h2>Company Registration</h2>
-
-<p>Pvt Ltd / LLP Registration</p>
-
-<h3>₹1999</h3>
-
-<button class="book-btn">
+</div>  <div class="card">  <h2>Company Registration</h2>  <p>  
+Pvt Ltd / LLP Registration  
+</p>  <h3>₹1999</h3>  <button class="book-btn"  
+onclick="showInquiry('Company Registration')">
 Book Now
 </button>
 
-<a
-href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=1999&cu=INR"
+<a href="upi://pay?pa=nilesh.y2@ptaxis&pn=Expert%20India%20CA&am=1999&cu=INR"  
 class="pay-btn">
 Pay ₹1999
 </a>
 
-</div>
+</div>  </section>  <section class="inquiry-form"  
+id="formSection">  <h2>  
+Client Inquiry Form  
+</h2>  <form id="leadForm">  <input type="text"  
+id="name"  
+placeholder="Your Name"  
+required>
 
-</section>
+<input type="tel"  
+id="mobile"  
+placeholder="Mobile Number"  
+required>
 
-<section class="stats">
+<input type="email"  
+id="email"  
+placeholder="Email Address"  
+required>
 
-<div class="stat-box">
+<select id="serviceName"  
+required>
 
-<h2>500+</h2>
+<option value="">  
+Select Service  
+</option>  <option>  
+GST Registration  
+</option>  <option>  
+Income Tax Filing  
+</option>  <option>  
+MSME Registration  
+</option>  <option>  
+Company Registration  
+</option>  </select>  <textarea  
+id="message"  
+placeholder="Enter Your Details">  
+</textarea>  <label>  
+Upload Aadhaar Card  
+</label>  <input type="file"  
+id="aadhaar">
 
-<p>Verified Clients</p>
+<label>  
+Upload PAN Card  
+</label>  <input type="file"  
+id="pan">
 
-</div>
+<label>  
+Upload Payment Screenshot  
+</label>  <input type="file"  
+id="payment">
 
-<div class="stat-box">
+<p id="uploadStatus"></p>  <button type="submit"  
+class="submit-btn">
+Submit Inquiry
+</button>
 
-<h2>100%</h2>
-
-<p>Trusted Service</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>24×7</h2>
-
-<p>Customer Support</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>4.9★</h2>
-
-<p>Client Rating</p>
-
-</div>
-
-</section>
-
-<section class="review-section">
-
-<h2 class="review-title">
-Customer Reviews
-</h2>
-
-<div class="review-card">
-
-<h3>Rahul Sharma ⭐⭐⭐⭐⭐</h3>
-
-<p>
-Very fast GST registration service.
-</p>
-
-</div>
-
-<div class="review-card">
-
-<h3>Aman Verma ⭐⭐⭐⭐⭐</h3>
-
-<p>
-Professional income tax filing support.
-</p>
-
-</div>
-
-</section>
-
-<section class="contact">
-
-<h2>Contact Us</h2>
-
-<p>📞 8840705418</p>
-
-<p>📧 nkygoodboy@gmail.com</p>
-
-</section>
-
-<a
-href="https://wa.me/918840705418"
+</form>  </section>  
+<section style="  
+padding:20px;  
+display:grid;  
+grid-template-columns:repeat(2,1fr);  
+gap:15px;  
+">  <div style="  
+background:white;  
+padding:20px;  
+border-radius:18px;  
+text-align:center;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+">  <h2 style="  
+margin:0;  
+font-size:32px;  
+color:#005eff;  
+">  
+500+  
+</h2>  <p style="  
+margin-top:10px;  
+font-size:18px;  
+font-weight:bold;  
+">  
+Verified Clients  
+</p>  </div>  <div style="  
+background:white;  
+padding:20px;  
+border-radius:18px;  
+text-align:center;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+">  <h2 style="  
+margin:0;  
+font-size:32px;  
+color:#005eff;  
+">  
+100%  
+</h2>  <p style="  
+margin-top:10px;  
+font-size:18px;  
+font-weight:bold;  
+">  
+Trusted Service  
+</p>  </div>  <div style="  
+background:white;  
+padding:20px;  
+border-radius:18px;  
+text-align:center;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+">  <h2 style="  
+margin:0;  
+font-size:32px;  
+color:#005eff;  
+">  
+24×7  
+</h2>  <p style="  
+margin-top:10px;  
+font-size:18px;  
+font-weight:bold;  
+">  
+Customer Support  
+</p>  </div>  <div style="  
+background:white;  
+padding:20px;  
+border-radius:18px;  
+text-align:center;  
+box-shadow:0 5px 15px rgba(0,0,0,0.1);  
+">  <h2 style="  
+margin:0;  
+font-size:32px;  
+color:#005eff;  
+">  
+4.9★  
+</h2>  <p style="  
+margin-top:10px;  
+font-size:18px;  
+font-weight:bold;  
+">  
+Client Rating  
+</p>  </div>  </section>  <section class="review-section">  <h2 class="review-title">  
+Customer Reviews  
+</h2>  <div class="review-card">  <h3>  
+Rahul Sharma ⭐⭐⭐⭐⭐  
+</h3>  <p>  
+Very fast GST registration service.  
+</p>  </div>  <div class="review-card">  <h3>  
+Aman Verma ⭐⭐⭐⭐⭐  
+</h3>  <p>  
+Professional income tax filing support.  
+</p>  </div>  <div class="review-card">  <h3>  
+Priya Singh ⭐⭐⭐⭐⭐  
+</h3>  <p>  
+Easy MSME registration process.  
+</p>  </div>  </section>  <section class="contact">  <h2>  
+Contact Us  
+</h2>  <p>  
+📞 8840705418  
+</p>  <p>  
+📧 nkygoodboy@gmail.com  
+</p>  </section>  <a href="https://wa.me/918840705418"  
 class="whatsapp">
 WhatsApp Us
 </a>
 
-</body>
-</html>
+<script>  
+  
+function showInquiry(service){  
+  
+document.getElementById(  
+'formSection'  
+).style.display='block';  
+  
+document.getElementById(  
+'serviceName'  
+).value=service;  
+  
+document.getElementById(  
+'formSection'  
+).scrollIntoView({  
+behavior:'smooth'  
+});  
+  
+}  
+  
+  
+  
+async function fileToBase64(file){  
+  
+return new Promise((resolve,reject)=>{  
+  
+const reader=new FileReader();  
+  
+reader.readAsDataURL(file);  
+  
+reader.onload=function(){  
+  
+resolve(  
+reader.result.split(',')[1]  
+);  
+  
+};  
+  
+reader.onerror=function(error){  
+  
+reject(error);  
+  
+};  
+  
+});  
+  
+}  
+  
+  
+  
+document.getElementById(  
+'leadForm'  
+).addEventListener(  
+  
+'submit',  
+  
+async function(e){  
+  
+e.preventDefault();  
+  
+const submitBtn =  
+document.querySelector('.submit-btn');  
+  
+submitBtn.innerHTML='Submitting...';  
+  
+submitBtn.disabled=true;  
+  
+  
+  
+const aadhaarFile =  
+document.getElementById('aadhaar').files[0];  
+  
+const panFile =  
+document.getElementById('pan').files[0];  
+  
+const paymentFile =  
+document.getElementById('payment').files[0];  
+  
+  
+  
+const data = {  
+  
+name:  
+document.getElementById('name').value,  
+  
+mobile:  
+document.getElementById('mobile').value,  
+  
+email:  
+document.getElementById('email').value,  
+  
+service:  
+document.getElementById('serviceName').value,  
+  
+details:  
+document.getElementById('message').value,  
+  
+aadhaar:  
+aadhaarFile  
+? await fileToBase64(aadhaarFile)  
+: "",  
+  
+pan:  
+panFile  
+? await fileToBase64(panFile)  
+: "",  
+  
+extra:  
+paymentFile  
+? await fileToBase64(paymentFile)  
+: ""  
+  
+};  
+  
+  
+  
+fetch(  
+  
+'https://script.google.com/macros/s/AKfycbyHi8XT2J5E46L73xvjOhuDy_reF3fzG3wmtJFn3G3HzM2pRwYcAuv3C7Q8pUMeiyV9/exec',  
+  
+{  
+  
+method:'POST',  
+  
+mode:'no-cors',  
+  
+headers:{  
+'Content-Type':'application/json'  
+},  
+  
+body:JSON.stringify(data)  
+  
+}  
+  
+)  
+  
+.then(function(){  
+const { jsPDF } = window.jspdf;  
+  
+const pdf = new jsPDF();  
+  
+pdf.setFontSize(20);  
+pdf.text('Expert India CA',20,20);  
+  
+pdf.setFontSize(12);  
+  
+pdf.text('Inquiry Receipt',20,40);  
+  
+pdf.text('Name: ' + data.name,20,55);  
+  
+pdf.text('Mobile: ' + data.mobile,20,65);  
+  
+pdf.text('Email: ' + data.email,20,75);  
+  
+pdf.text('Service: ' + data.service,20,85);  
+  
+pdf.text('Status: Inquiry Submitted',20,95);  
+  
+pdf.text(  
+'Thank you for choosing Expert India CA',  
+20,  
+110  
+);  
+  
+pdf.save('ExpertIndiaCA-Receipt.pdf');  
+emailjs.send(  
+'service_0yb0k42',  
+'template_jdc7vru',  
+{  
+name:data.name,  
+service:data.service,  
+email:data.email  
+}  
+);  
+  
+emailjs.send(  
+'service_0yb0k42',  
+'template_nwzxfpg',  
+{  
+name:data.name,  
+mobile:data.mobile,  
+email:data.email,  
+service:data.service,  
+details:data.details  
+}  
+);  
+  
+alert(  
+'Inquiry Submitted Successfully ✅'  
+);  
+  
+document.getElementById(  
+'leadForm'  
+).reset();  
+  
+document.getElementById(  
+'formSection'  
+).style.display='none';  
+  
+submitBtn.innerHTML='Submit Inquiry';  
+  
+submitBtn.disabled=false;  
+  
+document.getElementById(  
+'uploadStatus'  
+).innerHTML=  
+'Files Uploaded Successfully ✅';  
+  
+})  
+  
+.catch(function(){  
+  
+alert(  
+'Submission Error'  
+);  
+  
+submitBtn.innerHTML='Submit Inquiry';  
+  
+submitBtn.disabled=false;  
+  
+});  
+  
+}  
+  
+);  
+  
+</script>  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>  <script>  
+  
+emailjs.init("OE311CsBk9pFLCQLm");  
+  
+</script>  </body>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>  </body>  </html>  Pura index bhej rha hu Esme add krke bhej me bs pest kru
