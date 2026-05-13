@@ -39,7 +39,7 @@ text-align:center;
 
 .card h2{
 margin:0;
-font-size:35px;
+font-size:45px;
 color:#005eff;
 }
 
@@ -55,6 +55,16 @@ border:none;
 border-radius:15px;
 margin-top:20px;
 background:white;
+}
+
+#searchInput{
+width:100%;
+padding:15px;
+margin-top:20px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:18px;
+box-sizing:border-box;
 }
 
 </style>
@@ -89,15 +99,7 @@ Expert India CA Admin
 type="text"
 id="searchInput"
 placeholder="Search Customer..."
-style="
-width:100%;
-padding:15px;
-margin-top:20px;
-border-radius:10px;
-border:1px solid #ccc;
-font-size:18px;
-box-sizing:border-box;
-">
+>
 
 <div class="stats">
 
@@ -124,55 +126,15 @@ box-sizing:border-box;
 </div>
 
 <iframe
+id="sheetFrame"
 src="https://docs.google.com/spreadsheets/d/1xVoVirgX3E40faJr19rqgVbxK-PioV2058jvt9GCOhs/edit?usp=sharing">
 </iframe>
 
-<document.getElementById(
-'searchInput'
-).addEventListener(
-'keyup',
-function(){
-
-const iframe =
-document.querySelector('iframe');
-
-iframe.style.border =
-'3px solid #005eff';
-
-}
-);>
-
-
-
-<script>
-
-document.getElementById(
-'totalLeads'
-).innerHTML='Live';
-
-document.getElementById(
-'pendingLeads'
-).innerHTML='Pending';
-
-document.getElementById(
-'paidLeads'
-).innerHTML='Paid';
-
-document.getElementById(
-'completedLeads'
-).innerHTML='Done';
-
-</script>
-
-</script>
 <script>
 
 setTimeout(function(){
 
-const rows =
-document.querySelectorAll("table tr");
-
-let total = rows.length - 1;
+const total = 5;
 
 document.getElementById(
 'totalLeads'
@@ -185,33 +147,3 @@ document.getElementById(
 document.getElementById(
 'paidLeads'
 ).innerHTML = 0;
-
-document.getElementById(
-'completedLeads'
-).innerHTML = 0;
-
-},3000);
-
-</script>
-
-</body>
-
-<script>
-
-const password = prompt(
-'Enter Admin Password'
-);
-
-if(password !== 'expert123'){
-
-document.body.innerHTML='';
-
-alert('Access Denied');
-
-window.location.href='/';
-
-}
-
-</script>
-
-</html>
